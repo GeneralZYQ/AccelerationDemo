@@ -10,7 +10,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) KMRoundAccelerationView *accelerationView;
+@property (nonatomic, strong) KMAccelerationView *accelerationView;
 
 @end
 
@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.accelerationView = [[KMRoundAccelerationView alloc] initWithFrame:CGRectMake(10, 40, 300, 300)];
+    self.accelerationView = [[KMAccelerationView alloc] initWithFrame:CGRectMake(10, 40, 20, 300)];
     [self.view addSubview:self.accelerationView];
 }
 
@@ -31,7 +31,8 @@
 
 - (void)startButtonPressed:(id)sender {
     
-    [self.accelerationView moveFromPercent:0 toPercent:55 withAcceleration:20];
+//    [self.accelerationView moveFromPercent:0 toPercent:55 withAcceleration:10];
+    [self.accelerationView moveFrom:5 to:300 withAcceleration:10];
 }
 
 @end
